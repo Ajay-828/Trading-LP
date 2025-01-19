@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --col1: #fafbff;
+    --col2: #ff6f00c9;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Navbar */
+
+.desk-nav{
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.navlinks a{
+    margin: 0 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* ---------- */
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+   
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+   
+}
+
+
+/* Home Page */
+
+.land{
+
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landdiv{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landdiv h1{
+    color: var(--col1);
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+
+    
+}
+
+.landdiv h2{
+    font-size: 90px;
+    color: var(--col1);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 40px;
+    background-color: var(--col2);
+    color: var(--col1);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    outline: none;
+    transition: background-color .5s, color .5s, border.5s;
+    
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--col2);
+    border: 1px solid var(--col2);
+}
+
+.mobile-nav{
+    display: none;
+}
+span{
+    color: var(--col2);
+}
+
+.member{
+    width: 200px;
+    height: 40px;
+    margin-left: 400px;
+}
+
+/* ---------- */
+
+/* Mobile view */
+
+@media screen and (max-width:460px) {
+    .desk-nav{
+        display: none;
+    }
+    .land{
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+   
+    .landdiv h1, .landdiv h2, .landdiv button{
+        margin-left: 0;
+    }
+    .landdiv- h1{
+        font-size: 40px;
+    }
+    .landdiv- h2{
+        font-size: 28px;
+    }
+}
+
+
+/* ---------- */
